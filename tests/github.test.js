@@ -47,7 +47,7 @@ describe('Testando interações no GitHub', () => {
       
       const username = await page.$eval(usernameSelector, el => el.textContent);
       
-      expect(username).toBe(process.env.USERNAME);
+      expect(username).toBe(process.env.GITHUB_USER);
     });
     
     it('2 - Deve ser possível abrir um PR e deslogar', async () => {
